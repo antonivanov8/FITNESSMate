@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="mainPane" prefHeight="584.0" prefWidth="900.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.anton.MainWindowController">
+
+    <left>
+        <VBox alignment="TOP_CENTER" prefHeight="536.0" prefWidth="162.0">
+            <children>
+                <Button fx:id="bodyButton" onAction="#handleSwitchingBetweenScenes" prefHeight="146.0" prefWidth="162.0" styleClass="left-nav-buttons" text="Body">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font></Button>
+                <Button fx:id="resultsButton" onAction="#handleSwitchingBetweenScenes" prefHeight="146.0" prefWidth="162.0" styleClass="left-nav-buttons" text="Results">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font></Button>
+                <Button fx:id="nutritionsButton" onAction="#handleSwitchingBetweenScenes" prefHeight="146.0" prefWidth="162.0" styleClass="left-nav-buttons" text="Nutrition">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font></Button>
+            <Button fx:id="profileButton" onAction="#handleSwitchingBetweenScenes" prefHeight="146.0" prefWidth="162.0" styleClass="left-nav-buttons" text="Profile">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            </children>
+        </VBox>
+    </left>
+
+    <center>
+
+        <GridPane fx:id="bodyGridPane" alignment="CENTER" hgap="10" prefHeight="300.0" prefWidth="763.0" vgap="10">
+            <children>
+                <Label text="Last" textFill="WHITE" GridPane.columnIndex="2">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+                <Label prefHeight="25.0" prefWidth="71.0" text="This" textFill="WHITE" GridPane.columnIndex="3">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+
+                <Label text="Weight:" textFill="WHITE" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+                <Label fx:id="lastWeekWeightLabel" text="n/a" textFill="#d7a614" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+                <TextField fx:id="thisWeekWeightTextField" prefHeight="25.0" prefWidth="80.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+                <Label text="Upper Arm:" textFill="WHITE" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+                <Label fx:id="lastWeekUpperArmLabel" text="n/a" textFill="#d7a614" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+                <TextField fx:id="thisWeekUpperArmTextField" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+                <Label text="Chest:" textFill="WHITE" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+                <Label fx:id="lastWeekChestLabel" text="n/a" textFill="#d7a614" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+                <TextField fx:id="thisWeekChestTextField" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+
+                <Label text="Neck:" textFill="WHITE" GridPane.columnIndex="0" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+                <Label fx:id="lastWeekNeckLabel" text="n/a" textFill="#d7a614" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+                <TextField fx:id="thisWeekNeckTextField" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+
+                <Label text="Waist:" textFill="WHITE" GridPane.columnIndex="0" GridPane.rowIndex="5">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+                <Label fx:id="lastWeekWaistLabel" text="n/a" textFill="#d7a614" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+                <TextField fx:id="thisWeekWaistTextField" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+
+                <Label text="Hips:" textFill="WHITE" GridPane.columnIndex="0" GridPane.rowIndex="6">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+                <Label fx:id="lastWeekHipsLabel" text="n/a" textFill="#d7a614" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+                <TextField fx:id="thisWeekHipsTextField" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+
+                <Label text="Thigh:" textFill="WHITE" GridPane.columnIndex="0" GridPane.rowIndex="7">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+                <Label fx:id="lastWeekThighLabel" text="n/a" textFill="#d7a614" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+                <TextField fx:id="thisWeekThighTextField" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+
+                <Label text="Calf:" textFill="WHITE" GridPane.columnIndex="0" GridPane.rowIndex="8">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+                <Label fx:id="lastWeekCalfLabel" text="n/a" textFill="#d7a614" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+                <TextField fx:id="thisWeekCalfTextField" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+
+                <Button fx:id="submitBodyButton" onAction="#handleSubmitBody" prefHeight="25.0" prefWidth="125.0" styleClass="button-regular" text="Submit" GridPane.columnIndex="3" GridPane.rowIndex="9">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+
+                <LineChart fx:id="bodyProgressLineChart" animated="false" prefHeight="270.0" prefWidth="403.0" title="Progress" GridPane.columnIndex="4" GridPane.rowIndex="1" GridPane.rowSpan="8">
+                    <xAxis>
+                        <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis side="LEFT" />
+                    </yAxis>
+                </LineChart>
+                <Label text="First" textFill="WHITE" GridPane.columnIndex="1">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+                <Label fx:id="firstWeekWeightLabel" text="n/a" textFill="#d7a614" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+                <Label fx:id="firstWeekUpperArmLabel" text="n/a" textFill="#d7a614" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+                <Label fx:id="firstWeekChestLabel" text="n/a" textFill="#d7a614" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+                <Label fx:id="firstWeekNeckLabel" text="n/a" textFill="#d7a614" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+                <Label fx:id="firstWeekWaistLabel" text="n/a" textFill="#d7a614" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+                <Label fx:id="firstWeekHipsLabel" text="n/a" textFill="#d7a614" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+                <Label fx:id="firstWeekThighLabel" text="n/a" textFill="#d7a614" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+                <Label fx:id="firstWeekCalfLabel" text="n/a" textFill="#d7a614" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+                <Label text="Week:" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+                <Label fx:id="bodyInfoLabel" text="Info Label" textFill="#d7a614" GridPane.columnSpan="3" GridPane.rowIndex="9">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Label>
+                <Label fx:id="thisWeekWeightLabel" text="Label" textFill="#d7a614" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Label>
+                <Label fx:id="thisWeekUpperArmLabel" text="Label" textFill="#d7a614" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Label>
+                <Label fx:id="thisWeekChestLabel" text="Label" textFill="#d7a614" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Label>
+                <Label fx:id="thisWeekNeckLabel" text="Label" textFill="#d7a614" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Label>
+                <Label fx:id="thisWeekWaistLabel" text="Label" textFill="#d7a614" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Label>
+                <Label fx:id="thisWeekHipsLabel" text="Label" textFill="#d7a614" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="6">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Label>
+                <Label fx:id="thisWeekThighLabel" text="Label" textFill="#d7a614" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="7">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Label>
+                <Label fx:id="thisWeekCalfLabel" text="Label" textFill="#d7a614" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="8">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Label>
+                <ChoiceBox fx:id="bodySeriesPicker" prefHeight="25.0" prefWidth="96.0" GridPane.columnIndex="4">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="All" />
+                            <String fx:value="Weight" />
+                            <String fx:value="Upper Arm" />
+                            <String fx:value="Chest" />
+                            <String fx:value="Neck" />
+                            <String fx:value="Waist" />
+                            <String fx:value="Hips" />
+                            <String fx:value="Thigh" />
+                            <String fx:value="Calf" />
+                        </FXCollections>
+                    </items>
+                </ChoiceBox>
+            </children>
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints />
+                <ColumnConstraints />
+                <ColumnConstraints prefWidth="65.0" />
+                <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+
+        <GridPane fx:id="resultsGridPane" alignment="CENTER" hgap="10" vgap="10">
+            <children>
+                <TableView fx:id="resultsTableView" prefHeight="410.0" prefWidth="402.0" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.rowIndex="1" GridPane.rowSpan="3">
+                    <columns>
+                        <TableColumn text="Exercise">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="exercise" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Series">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="series" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Repeats">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="repeats" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Weights">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="weights" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn text="Time">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="time" />
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+                <VBox prefHeight="410.0" prefWidth="200.0" spacing="10" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                    <children>
+                        <Label text="Choose Date: " textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font></Label>
+                        <DatePicker fx:id="resultsDatePicker" prefHeight="25.0" prefWidth="200.0" />
+                        <Label text="Add Result: " textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font></Label>
+                        <TextField fx:id="exerciseTextField" promptText="Exercise" />
+                        <TextField fx:id="seriesTextField" promptText="Series" />
+                        <TextField fx:id="repeatsTextField" promptText="Repeats" />
+                        <TextField fx:id="weightsTextField" promptText="Weights" />
+                        <TextField fx:id="timeTextField" promptText="Time" />
+                        <Button onAction="#handleAddResult" prefHeight="25.0" prefWidth="200.0" styleClass="button-regular" text="Add" />
+                        <Label fx:id="resultsInfoLabel" text="Label" textFill="#d7a614">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font></Label>
+                    </children>
+                </VBox>
+            </children>
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints />
+                <ColumnConstraints />
+                <ColumnConstraints />
+                <ColumnConstraints />
+                <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+
+        <GridPane fx:id="nutritionsGridPane" alignment="CENTER" hgap="10" prefHeight="466.0" prefWidth="739.0" vgap="10">
+            <children>
+                <TableView fx:id="nutritionsTableView" prefHeight="410.0" prefWidth="315.0" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.rowIndex="1" GridPane.rowSpan="3">
+                    <columns>
+                        <TableColumn prefWidth="91.0" text="Meal">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="meal" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="90.0" text="Food">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="food" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="89.0" text="Quantity">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="quantity" />
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+                <VBox prefHeight="246.0" prefWidth="200.0" spacing="10" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                    <children>
+                        <Label text="Choose Date: " textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font></Label>
+                        <DatePicker fx:id="nutritionsDatePicker" prefWidth="200.0" />
+                        <Label text="Add Nutrition: " textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font></Label>
+                        <ChoiceBox fx:id="mealChoiceBox" prefHeight="25.0" prefWidth="200.0">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="breakfast" />
+                                    <String fx:value="lunch" />
+                                    <String fx:value="dinner" />
+                                    <String fx:value="mid" />
+                                </FXCollections>
+                            </items>
+
+                        </ChoiceBox>
+                        <TextField fx:id="foodTextField" promptText="Food" />
+                        <TextField fx:id="quantityTextField" promptText="Quantity" />
+                        <Button onAction="#handleAddNutrition" prefHeight="25.0" prefWidth="200.0" styleClass="button-regular" text="Add" />
+                        <Label fx:id="nutritionsInfoLabel" text="Label" textFill="#d7a614">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+            </children>
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints />
+                <ColumnConstraints />
+                <ColumnConstraints />
+                <ColumnConstraints />
+                <ColumnConstraints />
+                <ColumnConstraints />
+                <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+
+        <GridPane fx:id="profileGridPane" alignment="CENTER" hgap="10" prefHeight="466.0" prefWidth="739.0" vgap="10">
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints />
+                <ColumnConstraints />
+                <ColumnConstraints />
+                <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="29.0" minHeight="19.0" prefHeight="20.0" />
+                <RowConstraints maxHeight="35.0" minHeight="25.0" prefHeight="34.0" />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            </rowConstraints>
+            <children>
+                <Label text="Level:" textFill="WHITE" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label text="Name:" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label fx:id="profileFirstNameLabel" text="Label" textFill="#d7a614" GridPane.columnIndex="1">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label text="Surname:" textFill="WHITE" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label text="Date of Birth:" textFill="WHITE" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label fx:id="profileDateOfBirthLabel" text="Label" textFill="#d7a614" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label fx:id="profileSurnameLabel" text="Label" textFill="#d7a614" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label text="Weight:" textFill="WHITE" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label fx:id="profileWeightLabel" text="Label" textFill="#d7a614" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label text="Created on:" textFill="WHITE" GridPane.rowIndex="6">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label text="Gender:" textFill="WHITE" GridPane.rowIndex="5">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label fx:id="profileLevelLabel" text="Label" textFill="#d7a614" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label fx:id="profileCreatedOnLabel" text="Label" textFill="#d7a614" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Button fx:id="profileEditButton" mnemonicParsing="false" onAction="#handleProfileEdit" prefHeight="25.0" prefWidth="80.0" styleClass="button-regular" text="Edit" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="7" />
+                <TextField fx:id="profileFirstNameTextField" visible="false" GridPane.columnIndex="1" />
+                <TextField fx:id="profileSurnameTextField" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <ChoiceBox fx:id="profileLevelChoiceBox" prefHeight="25.0" prefWidth="175.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="beginner" />
+                            <String fx:value="intermediate" />
+                            <String fx:value="advanced" />
+                            <String fx:value="expert" />
+                        </FXCollections>
+                    </items>
+                </ChoiceBox>
+                <DatePicker fx:id="profileDateOfBirthDatePicker" prefWidth="176.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="profileGenderLabel" text="Label" textFill="#d7a614" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <GridPane prefHeight="101.0" prefWidth="255.0" vgap="10.0" GridPane.columnIndex="2" GridPane.rowSpan="4">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox prefHeight="27.0" prefWidth="210.0" GridPane.columnSpan="3" GridPane.rowIndex="1">
+                     <children>
+                        <Label layoutX="22.0" layoutY="28.0" prefHeight="17.0" prefWidth="85.0" text="Body" textFill="WHITE" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="17.0" prefWidth="85.0" text="Results" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="27.0" prefWidth="85.0" text="Nutrition" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label layoutX="79.0" layoutY="6.0" prefHeight="17.0" prefWidth="255.0" text="Number of records" textFill="WHITE" GridPane.columnSpan="3">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <HBox GridPane.columnSpan="3" GridPane.rowIndex="2">
+                     <children>
+                        <Label fx:id="profileNumberOfBodyRecordsLabel" prefWidth="85.0" text="Label" textFill="#d7a614" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="profileNumberOfResultsRecordsLabel" prefWidth="85.0" text="Label" textFill="#d7a614" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="profileNumberOfNutritionsRecordsLabel" prefWidth="85.0" text="Label" textFill="#d7a614" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleDeleteRecords" prefHeight="25.0" prefWidth="80.0" styleClass="button-regular" text="Delete" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+            <Button mnemonicParsing="false" onAction="#handleLogout" prefWidth="80.0" styleClass="button-regular" text="Logout" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <Label fx:id="profileInfoLabel" text="Label" textFill="WHITE" visible="false" GridPane.rowIndex="7">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            </children>
+        </GridPane>
+
+    </center>
+
+    <bottom>
+
+    </bottom>
+</BorderPane>

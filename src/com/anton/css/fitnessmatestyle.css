@@ -1,0 +1,99 @@
+.root {
+    -fx-background-color: black;
+}
+.dialog {
+    -fx-background-color: black;
+}
+.left-nav-buttons {
+    -fx-background-color: white;
+    -fx-background-radius:  0px;
+    -fx-border-radius: 0px;
+}
+.left-nav-buttons:hover {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+.button-regular {
+    -fx-text-fill: white;
+    -fx-background-color: black;
+    -fx-border-color: white;
+    -fx-border-style: solid;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+}
+.button-regular:hover{
+    -fx-text-fill: black;
+    -fx-background-color: white;
+    -fx-background-radius:  5px;
+}
+#active-button {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+.text-field {
+    -fx-background-radius:  5px !important;
+}
+.choice-box{
+    -fx-background-radius:  5px !important;
+    -fx-background-color: white;
+}
+.choice-box .menu-item:focused {
+    -fx-background-color: #d7a614;
+}
+.table-view {
+    -fx-border-color: transparent;
+}
+.table-view .column-header-background{
+    -fx-background-color: white;
+}
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+.table-view .table-cell{
+    -fx-text-fill: #d7a614;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-border-color: white;
+}
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color, black;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, black;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+.chart {
+    -fx-background-color: transparent;
+}
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+.chart-legend {
+   -fx-background-color:  transparent;
+   -fx-padding: 20px;
+}
+.chart-legend-item-symbol{
+   -fx-background-radius: 3px;
+}
+.chart-title {
+  -fx-text-fill: white;
+  -fx-font-weight: bold;
+}
+.chart-legend-item{
+    -fx-text-fill: #191970;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+.chart-vertical-grid-lines {
+    -fx-stroke: white;
+}
+.chart-horizontal-grid-lines {
+    -fx-stroke: white;
+}
+.axis {
+    -fx-tick-label-fill: white;
+}
