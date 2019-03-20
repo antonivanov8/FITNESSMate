@@ -35,22 +35,6 @@ public class BodyDailyInput implements Serializable {
         this.calf = calf;
     }
 
-    public BodyDailyInput(String date, String weight, String upperArm, String chest, String neck, String waist, String hips, String thigh, String calf) {
-//        Date today = Calendar.getInstance().getTime();
-//        DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
-//        this.date = dateFormat.format(today);
-        this.date = date;
-        this.weight = weight;
-        this.upperArm = upperArm;
-        this.chest = chest;
-        this.neck = neck;
-        this.waist = waist;
-        this.hips = hips;
-        this.thigh = thigh;
-        this.calf = calf;
-        System.out.println(this.toString());
-    }
-
     public String getDate() {
         return date;
     }

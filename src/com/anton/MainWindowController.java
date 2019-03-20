@@ -353,7 +353,7 @@ public class MainWindowController {
                 bodyInfoLabel.setText("Invalid data!");
                 return;
             } else {
-                BodyDailyInput bodyDailyInput = new BodyDailyInput("20-12-2019",thisWeekWeightTextField.getText(),
+                BodyDailyInput bodyDailyInput = new BodyDailyInput(thisWeekWeightTextField.getText(),
                         thisWeekUpperArmTextField.getText(), thisWeekChestTextField.getText(),
                         thisWeekNeckTextField.getText(),thisWeekWaistTextField.getText(),
                         thisWeekHipsTextField.getText(),thisWeekThighTextField.getText(),
